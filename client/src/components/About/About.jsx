@@ -4,7 +4,7 @@ function About() {
 
 
     return (
-        <div className="flex md:flex-col justify-center items-center">
+        <div className="flex m-28 md:flex-col justify-center items-center">
 
             <section className="flex flex-wrap m-8 p-8 gap-20 justify-center items-center">
 
@@ -22,7 +22,7 @@ function About() {
                     
                     <button className="rounded-2xl w-96 border-green-400 bg-black text-green-400 p-4 font-bold text-2xl">
                         <a 
-                            href=""
+                            href="./public/GAURAV GHUGE.pdf"
                              
                             download="./public/GAURAV GHUGE.pdf"
                         >

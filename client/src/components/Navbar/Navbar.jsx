@@ -11,7 +11,6 @@ import { useState } from "react";
 
 function Navbar() {
 
-
     const mobileNav = useMediaQuery('(max-width: 1024px)');
     const smallMobileNav = useMediaQuery('(max-width: 724px)');
 
@@ -19,27 +18,46 @@ function Navbar() {
     const [isSidebarOpen, setSidebarOpen] = useState(false);
 
     const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
-    
-
-
     // const closeSidebar = () => setSidebarOpen(false);
+
+
+    const [darkMode, setDarkMode] = useState(true);
+
+    if (darkMode) {
+        document.body.style = '';
+    }
+    else {
+        document.body.style = 'background-color: white; color: black; font-family: sans-serif;';
+    }
+
+    const toggleDarkMode = () => {
+        setDarkMode(true);
+    }
+
+    const toggleLightMode = () => {
+        setDarkMode(false);
+    }
+
+
+
+
 
 
 
     return (
 
-        <> 
+        <section className=" rounded-xl fixed top-0 left-0 w-full p-4">
    
          
                 <nav className="responsive-navbar">
 
                     <header className="flex justify-between gap-8 items-center">
-                        <div>
+                        <div onClick={toggleDarkMode}>
                             
                             <DarkModeIcon />
 
                         </div>
-                        <div>
+                        <div onClick={toggleLightMode}>
 
                             <LightModeIcon />
 
@@ -111,7 +129,7 @@ function Navbar() {
                 </nav>  
             
 
-        </>    
+        </section>    
     )
 
 }
