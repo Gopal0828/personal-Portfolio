@@ -125,7 +125,11 @@
 
 
 
-                                                <p><span className="text-rose-600 bg-gray-700 p-2 rounded-lg mr-4">Notice: </span>{pro.notice}</p>
+                                                <p>
+                                                    <span className="text-rose-600 bg-gray-700 p-2 rounded-lg mr-4">Notice: </span>{pro.notice}
+                                                </p>
+
+                                                <br/>
                                             </main>
 
 
@@ -173,7 +177,7 @@
         
         </div>
     )
-    
+
     }
 
     export default Experience
