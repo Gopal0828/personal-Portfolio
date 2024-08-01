@@ -5,43 +5,39 @@ function Experience() {
     const [experience , setExperience] = useState([
         {
             id: 1,
-            company: 'Google',
-            position: 'Software Engineer',
+            company: 'Arohi Software',
+            address: 'Shrigonda, Ahmednagar, Maharashtra, India',
+            position: 'Full Stack Developer',
             profile: "",
-            startDate: '2021-09-01',
-            endDate: '2021-09-01',
-            description: 'Work on react framework, node.js, and google cloud, and also work on different javascript frameworks.',
+            startDate: '07 may 2025',
+            endDate: 'currently working',
+
+            description: 'I started my first job as a full stack developer in may 2024. i have not any experience of how work in company. i am very interested in learning new things and i am ready to learn new things and work on Industry live projects and how works there. ',
             project: [
                 {
                     id: 1,
                     name: 'Employee Management System',
                     description: 'Create a system that allows employees to manage their own information, including their contact information, salary, and benefits.',
-                    url: 'https://cloud.google.com/',
+
+                    url: 'https://emplyeemanagement1.vercel.app/',
+                    repository: 'https://github.com/gauravghuge7/emplyeemanagement1',
                     image: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png'
                 },
 
                 {
                     id: 2,
-                    name: 'Google Cloud Platform',
-                    description: 'This is a project description',
+                    name: 'Learning Management System',
+                    description: 'create a system that allows students to manage their own information, including their contact information, they can manage their profile like view profile, edit profile, delete profile etc.  a students can Enrolled in a course, they can view their course details, view theie lectures and assignments, and lectures notes',
                     url: 'https://cloud.google.com/',
+                    repository: 'https://github.com/gauravghuge7/emplyeemanagement1',
                     image: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png'
                 }
 
             ]
         },
+        
 
-
-        {
-            id: 1,
-            company: 'microsoft',
-            position: 'Software Engineer',
-            startDate: '2021-09-01',
-            endDate: '2021-09-01',
-            description: 'This is a project description',
-
-        }
-
+        
 
 
     ])
@@ -52,51 +48,75 @@ function Experience() {
         <div>
             <h1 className='text-2xl text-center underline'>Experience</h1>
 
-            <section className='mt-20 mb-10 flex  flex-wrap flex-col md:flex-row gap-4 justify-around align-center'>
+            <section className='mt-20 text-xl w-[80%]  m-auto  mb-10 flex flex-wrap flex-col md:flex-row gap-4 justify-around align-center border-1 border-gray-700 rounded-lg'>
 
                 {
                     experience.map((exp, index) => (
                         <div 
                             key={index} 
-                            className="shadow-lg hover:shadow-2xl hover:shadow-green-500  shadow-gray-900  p-4 w-auto md:w-[40rem] rounded-xl"
+                            className="shadow-lg  shadow-gray-900  p-4 w-auto md:w-80%  rounded-xl"
                         >
 
 
-                            <h2 className='text-orange-400 text-2xl font-semibold text-center'>{exp.company}</h2>
-                            <p className=''>{exp.position}</p>
+                            <h2 className='text-gray-900 text-3xl font-bold text-center'>
+                                <a href="https://www.linkedin.com/company/arohi-software/">{exp.company}</a>
+                            </h2>
 
-                            <p><span className="text-orange-400">Start Date: </span>{exp.startDate}</p>
+                            <p className='text-center text-blue-900'>{exp.position}</p>
 
-                            <p><span>End Date: </span>{exp.endDate}</p>
+                            <p><span className="text-rose-600 bg-gray-700 p-2 rounded-lg mr-4">Address : </span>{exp.address}</p>
+                            <br/>
 
-                            <p><span>Description: </span>{exp.description}</p>
+                            <p><span className="text-rose-600 bg-gray-700 p-2 rounded-lg mr-4">Start Date: </span>{exp.startDate}</p>
+                            <br/>
+
+                            <p><span  className="text-rose-600 bg-gray-700 p-2 rounded-lg mr-4">End Date: </span>{exp.endDate}</p>
+                            <br/>
+
+                            <p><span className="text-rose-600 bg-gray-700 p-2 rounded-lg mr-4">Description: </span>{exp.description}</p>
+
+                            <br/>
 
                             <div> 
-                                <h3 className='text-2xl font-semibold text-center'>Projects</h3>
-                                <section className='flex flex-col gap-4 '>
+                                <h3 className='text-rose-600 bg-gray-700 p-2 text-center rounded-lg mr-4'>Projects</h3>
+                                <section className='flex flex-col gap-4 text-center align-center justify-around'>
                                 {
                                     exp.project && exp.project.map((pro, index) => (
 
                                         <div
 
                                             key={index}
-                                            className="shadow-sm hover:shadow-2xl hover:shadow-green-500  shadow-gray-900  p-4 w-auto md:w-[30rem] rounded-xl"
+                                            className="shadow-sm hover:shadow-2xl hover:shadow-gray-400 shadow-gray-900 m-auto  p-4 w-[90%] mt-4 rounded-xl"
                                         >
 
                                             <h2 
-                                                className="text-cyan-500 text-xl font-semibold text-center"
+                                                className="text-green-600 bg-gray-700 p-2 rounded-lg"
                                             >
                                                 {pro.name}
                                             </h2>
                                             <p className="text-white text-sm">{pro.description}</p>
 
-                                            <p className="text-gray-400 text-sm">
+                                            <img src="" alt="project" className="w-full h-auto rounded-lg"/>
+
+                                            <div className="flex gap-2 justify-center items-center">
                                             
-                                                <span className="text-orange-400">URL: </span>
-                                                <a href={pro.url} target="_blank" rel="noreferrer">
-                                                    {pro.url}
-                                                </a>    
-                                            </p>
+                                                <button className="text-gray-900 rounded p-2 bg-pink-400 text-sm ">
+                                                
+                                                    
+                                                    <a href={pro.url} target="_blank" rel="noreferrer">
+                                                        View Project
+                                                    </a>    
+                                                </button>
+
+                                                <button className="text-gray-900 rounded p-2 bg-pink-400 text-sm ">
+                                                
+                                                    
+                                                    <a href={pro.url} target="_blank" rel="noreferrer">
+                                                        View Repository
+                                                    </a>    
+                                                </button>
+                                            
+                                            </div>
 
 
                                         </div>

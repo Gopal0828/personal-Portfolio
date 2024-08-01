@@ -17,7 +17,7 @@ export default class Contact extends Component {
         
             </section>
     
-            <main className="flex flex-row justify-center w-auto md:w-[40rem] items-center gap-12 flex-wrap">
+            <main className="flex flex-col md:flex-row justify-center w-full sm:w-auto md:w-full items-center gap-4 sm:gap-8 md:gap-12">
 
                 <div className="detail shadow-lg flex flex-col justify-center items-center rounded-xl bg-gray-400 md:p-20 py-20 shadow-gray-500">
                 
