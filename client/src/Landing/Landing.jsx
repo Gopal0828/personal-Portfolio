@@ -6,6 +6,7 @@ import Skills from "../components/Skills/Skills.jsx"
 import Projects from "../components/Projects/Projects.jsx"
 import Experience from "../components/Experience/Experience.jsx"
 import Profiles from "../components/Profiles/Profiles.jsx"
+import Footer from "../components/Footer/Footer.jsx"
 
 
 
@@ -37,7 +38,7 @@ function Landing() {
 
       <Contact />
 
-      
+      <Footer />
     </div>
   )
 }

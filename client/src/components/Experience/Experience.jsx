@@ -1,6 +1,6 @@
-import { useState } from "react"
+    import { useState } from "react"
 
-function Experience() {
+    function Experience() {
 
     const [experience , setExperience] = useState([
         {
@@ -27,10 +27,15 @@ function Experience() {
                 {
                     id: 2,
                     name: 'Learning Management System',
+                    field: "software development",
+                    availableFor: "mobile browsers and web browsers",
                     description: 'create a system that allows students to manage their own information, including their contact information, they can manage their profile like view profile, edit profile, delete profile etc.  a students can Enrolled in a course, they can view their course details, view theie lectures and assignments, and lectures notes',
                     url: 'https://cloud.google.com/',
                     repository: 'https://github.com/gauravghuge7/emplyeemanagement1',
-                    image: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png'
+                    image: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+                    technologies: 'React, Redux, Tailwind CSS, MongoDB, Express, Node.js',
+
+                    notice: 'If project is not working, there is hosted on personal account, only for personal use and not for commercial use. there you can check the repository of code there is attached the hosted link youn check from there if project not working, contact me on gauravghuge737@gmail.com '
                 }
 
             ]
@@ -96,7 +101,38 @@ function Experience() {
                                             </h2>
                                             <p className="text-white text-sm">{pro.description}</p>
 
-                                            <img src="" alt="project" className="w-full h-auto rounded-lg"/>
+                                            <img 
+                                                src="" 
+                                                alt="project Landing Page"
+                                                className="w-full h-auto rounded-lg"
+                                                height="200px"
+                                                width="500px"
+                                            />
+
+
+
+
+
+                                            <main className="text-white text-sm">
+                                            
+                                            
+
+                                                <p><span className="text-blue-600 bg-gray-700 p-2 rounded-lg mr-4">Technologies: </span>{pro.technologies}</p>
+
+                                                <br/>
+
+
+
+
+
+                                                <p><span className="text-rose-600 bg-gray-700 p-2 rounded-lg mr-4">Notice: </span>{pro.notice}</p>
+                                            </main>
+
+
+
+
+
+
 
                                             <div className="flex gap-2 justify-center items-center">
                                             
@@ -125,7 +161,7 @@ function Experience() {
                                 </section>
                             
                             </div>
-                     
+                    
 
                         </div>
                     ))
@@ -137,6 +173,7 @@ function Experience() {
         
         </div>
     )
-}
+    
+    }
 
-export default Experience
+    export default Experience
