@@ -75,28 +75,37 @@ function Projects() {
                                 {project.status}
                             </p>
                             <br/>
+                            
+                            <img 
+                                src=""
+                                alt="project landing page"
+                                className="w-[70%] h-40 m-auto"
+                            />
+
+                            <br/>
                             <p className=''>{project.description}</p>
+
 
                             <br/>   
                             <div className="flex gap-2 justify-center items-center">
                                             
-                                                <button className="text-gray-900 rounded p-2 bg-pink-400 text-sm ">
-                                                
-                                                    
-                                                    <a href={project.url} target="_blank" rel="noreferrer">
-                                                        View Project
-                                                    </a>    
-                                                </button>
+                                <button className="text-gray-900 rounded p-2 bg-pink-400 text-sm ">
+                                
+                                    
+                                    <a href={project.url} target="_blank" rel="noreferrer">
+                                        View Project
+                                    </a>    
+                                </button>
 
-                                                <button className="text-gray-900 rounded p-2 bg-pink-400 text-sm ">
-                                                
-                                                    
-                                                    <a href={project.repository} target="_blank" rel="noreferrer">
-                                                        View Repository
-                                                    </a>    
-                                                </button>
-                                            
-                                            </div>
+                                <button className="text-gray-900 rounded p-2 bg-pink-400 text-sm ">
+                                
+                                    
+                                    <a href={project.repository} target="_blank" rel="noreferrer">
+                                        View Repository
+                                    </a>    
+                                </button>
+                            
+                            </div>
 
                             
                             
