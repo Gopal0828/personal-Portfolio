@@ -8,8 +8,8 @@ function Projects() {
             name: 'Personal Portfolio',
             description: 'developed in using react, tailwind and redux for frontend',
             dueDate: '2021-09-01',
-            repository: 'https://github.com/gauravghuge7/Portfolio',
-            hostedLink: 'https://gauravghuge7.github.io/Portfolio/',
+            repository: 'https://github.com/gauravghuge7/personal-Portfolio',
+            url: 'https://personal-portfolio-opal-kappa.vercel.app/',
             status: 'Completed',
         },
         {
@@ -17,19 +17,23 @@ function Projects() {
             name: 'Employee Management System',
             description: 'developed a web application for employee management that can check the daily tasks of employees and can also add new tasks',
             dueDate: '2021-09-01',
-            repository: 'https://github.com/gauravghuge7/Employee-Management-System',
-            hostedLink: 'https://gauravghuge7.github.io/Employee-Management-System/',
+            repository: 'https://github.com/gauravghuge7/emplyeemanagement1',
+            url: 'https://emplyeemanagement1.vercel.app/',
 
             status: 'In Progress',
         },
         {
-            id: 3,
+            id: 2,
             name: 'Learning Management System',
-            description: 'This is a project description',
-            dueDate: '2021-09-01',
-            repository: 'https://github.com/gauravghuge7/Learning-Management-System',
-            hostedLink: 'https://gauravghuge7.github.io/Learning-Management-System/',
-            status: 'In Progress',
+            field: "software development",
+            availableFor: "mobile browsers and web browsers",
+            description: 'create a system that allows students to manage their own information, including their contact information, they can manage their profile like view profile, edit profile, delete profile etc.  a students can Enrolled in a course, they can view their course details, view theie lectures and assignments, and lectures notes',
+            url: 'https://emplyeemanagement1.vercel.app/',
+            repository: 'https://github.com/gauravghuge7/emplyeemanagement1',
+            image: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+            technologies: 'React, Redux, Tailwind CSS, MongoDB, Express, Node.js',
+
+            notice: 'If project is not working, there is hosted on personal account, only for personal use and not for commercial use. there you can check the repository of code there is attached the hosted link youn check from there if project not working, contact me on gauravghuge737@gmail.com '
         }
 
 
@@ -51,7 +55,7 @@ function Projects() {
         <div className=' mt-20 mb-10'>
             <h1 className='text-xl font-bold m-12 text-center underline'>Projects</h1>
 
-            <section className="flex flex-wrap justify-around text-center gap-4">
+            <section className="flex flex-col justify-around text-center gap-8">
 
                 {
 
@@ -60,20 +64,42 @@ function Projects() {
 
                         <div 
                             key={index} 
-                            className="shadow-lg shadow-gray-900  p-4 w-[20rem] rounded-xl"
+                            className="shadow-lg shadow-gray-900  p-4 w-[80%] m-auto rounded-xl"
                             >
 
-                            <h2 className='text-blue-100 text-xl text-center'>{project.name}</h2>
+                            <h2 className='text-green-600 text-xl bg-gray-700 p-2 rounded-lg'>{project.name}</h2>
 
+                            <br/>
+                            <p> 
+                                <span className="text-rose-600 text-start bg-gray-700 p-2 rounded-lg mr-4">Status: </span>
+                                {project.status}
+                            </p>
+                            <br/>
                             <p className=''>{project.description}</p>
 
-                            <button> 
-                                <a href={projects.repository} 
-                                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View Repository</a>
-                            </button>
+                            <br/>   
+                            <div className="flex gap-2 justify-center items-center">
+                                            
+                                                <button className="text-gray-900 rounded p-2 bg-pink-400 text-sm ">
+                                                
+                                                    
+                                                    <a href={project.url} target="_blank" rel="noreferrer">
+                                                        View Project
+                                                    </a>    
+                                                </button>
 
-                            <p>Due Date: {project.dueDate}</p>
-                            <p>Status: {project.status}</p>
+                                                <button className="text-gray-900 rounded p-2 bg-pink-400 text-sm ">
+                                                
+                                                    
+                                                    <a href={project.repository} target="_blank" rel="noreferrer">
+                                                        View Repository
+                                                    </a>    
+                                                </button>
+                                            
+                                            </div>
+
+                            
+                            
 
                         </div>
 
