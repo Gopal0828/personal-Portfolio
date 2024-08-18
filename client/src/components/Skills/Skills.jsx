@@ -10,31 +10,31 @@ export default function Skills() {
             description: [
                 {
                     name: "HTML",
-                    image: "./skills/html.png"
+                    image: "./html.png"
                 },
                 {
                     name: "CSS",
-                    image: "./skills/css.png"
+                    image: "./css.png"
                 },
                 {
                     name: "JavaScript",
-                    image: "./skills/javascript.png"
+                    image: "./javascript.png"
                 },
                 {
                     name: "React",
-                    image: "./skills/react.png"
+                    image: "./react.png"
                 },
                 {
                     name: "Tailwind Css",
-                    image: "./skills/tailwind.png"
+                    image: "./tailwind.png"
                 },
                 {
                     name: "Redux",
-                    image: "./skills/redux.png"
+                    image: "./redux.png"
                 },
                 {
                     name: "Redux Toolkit",
-                    image: "./skills/redux-toolkit.png"
+                    image: "./redux-toolkit.png"
                 }
                 
                
@@ -45,27 +45,27 @@ export default function Skills() {
             description: [
                 {
                     name: "NodeJs",
-                    image: "./skills/nodejs.png"
+                    image: "./nodejs.png"
                 },
                 {
                     name: "Express",
-                    image: "./skills/express.png"
+                    image: "./express.png"
                 },
                 {
                     name: "JavaScript",
-                    image: "./skills/javascript.png"
+                    image: "./javascript.png"
                 },
                 {
                     name: "Authentication",
-                    image: "./skills/authentication.png"
+                    image: "./authentication.png"
                 },
                 {
                     name: "JWT",
-                    image: "./skills/jwt.png"
+                    image: "./jwt.png"
                 },
                 {
                     name: "Authorization",
-                    image: "./skills/authorization.png"
+                    image: "./authorization.png"
                 }
             ]
        
@@ -75,19 +75,19 @@ export default function Skills() {
             description: [
                 {
                     name: "C++",
-                    image: "./skills/c++.png"
+                    image: "./c++.png"
                 },
                 {
                     name: "JAVA",
-                    image: "./skills/java.png"
+                    image: "./java.png"
                 },
                 {
                     name: "Data Structures",
-                    image: "./skills/data-structures.png"
+                    image: "./data-structures.png"
                 },
                 {
                     name: "Algorithms",
-                    image: "./skills/algorithms.png"
+                    image: "./algorithms.png"
                 },
                 
                 
@@ -100,23 +100,23 @@ export default function Skills() {
             description: [
                 {
                     name: "MongoDB",
-                    image: "./skills/mongodb.png"
+                    image: "./mongodb.png"
                 },
                 {
                     name: "MySQL",
-                    image: "./skills/mysql.png"
+                    image: "./mysql.png"
                 },
                 {
                     name: "SQL",
-                    image: "./skills/sql.png"
+                    image: "./sql.png"
                 },
                 {
                     name: "DBMS",
-                    image: "./skills/dbms.png"
+                    image: "./dbms.png"
                 },
                 {
                     name: "RDBMS",
-                    image: "./skills/rdbms.png"
+                    image: "./rdbms.png"
                 }
             ]   
         },
@@ -126,35 +126,35 @@ export default function Skills() {
             description: [
                 {
                     name: "vscode",
-                    image: "./skills/vscode.png"
+                    image: "./vscode.png"
                 },
                 {
                     name: "git",
-                    image: "./skills/git.png"
+                    image: "./git.png"
                 },
                 {
                     name: "npm",
-                    image: "./skills/npm.png"
+                    image: "./npm.png"
                 },
                 {
                     name: "Postman",
-                    image: "./skills/postman.png"
+                    image: "./postman.png"
                 },
                 {
                     name: "Terminal",
-                    image: "./skills/terminal.png"
+                    image: "./terminal.png"
                 },
                 {
                     name: "Linux",
-                    image: "./skills/linux.png"
+                    image: "./linux.png"
                 },
                 {
                     name: "GitHub",
-                    image: "./skills/github.png"
+                    image: "./github.png"
                 },
                 {
                     name: "AWS",
-                    image: "./skills/aws.png"
+                    image: "./aws.png"
                 }
             ]   
         }
