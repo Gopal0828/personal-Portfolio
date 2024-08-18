@@ -34,7 +34,7 @@ function About() {
 
                 <div className="rounded-[50%] p-4">
                     <img 
-                        src="./public/professional photo.png" 
+                        src="http://res.cloudinary.com/dsh5742fk/image/upload/v1723997949/ireznsofoi9jvpioxf2t.jpg" 
                         alt="photo" 
                         height="400px"
                         width="400px"
