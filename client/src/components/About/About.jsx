@@ -22,9 +22,9 @@ function About() {
                     
                     <button className="rounded-2xl w-96 border-green-400 bg-black text-green-400 p-4 font-bold text-2xl">
                         <a 
-                            href="./public/GAURAV GHUGE.pdf"
+                            href="http://res.cloudinary.com/dsh5742fk/image/upload/v1723997745/hbwrkwlmb0zaak2bx5q4.pdf"
                              
-                            download="./public/GAURAV GHUGE.pdf"
+                            download="http://res.cloudinary.com/dsh5742fk/image/upload/v1723997745/hbwrkwlmb0zaak2bx5q4.pdf"
                         >
                             Download Resume
                         </a>
