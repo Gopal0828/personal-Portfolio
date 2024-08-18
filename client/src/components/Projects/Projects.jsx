@@ -8,16 +8,30 @@ function Projects() {
             name: 'Personal Portfolio',
             description: 'developed in using react, tailwind and redux for frontend',
             dueDate: '2021-09-01',
+            image: './second-portfolio.png',
             repository: 'https://github.com/gauravghuge7/personal-Portfolio',
             url: 'https://personal-portfolio-opal-kappa.vercel.app/',
             status: 'Completed',
         },
         {
             id: 2,
+            name: 'Old Portfolio Project',
+            description: 'create a static web site using html, css, and javascript', 
+            dueDate: '2021-09-01',
+            repository: 'https://github.com/gauravghuge7/emplyeemanagement1',
+            url: 'https://gauravghuge7.github.io/Portfolio-Project-UI/',
+            image: "./old-portfolio.png",
+            status: 'Completed',
+        },
+
+        
+        {
+            id: 2,
             name: 'Employee Management System',
             description: 'developed a web application for employee management that can check the daily tasks of employees and can also add new tasks',
             dueDate: '2021-09-01',
             repository: 'https://github.com/gauravghuge7/emplyeemanagement1',
+            image: './arohi-employee.png',
             url: 'https://emplyeemanagement1.vercel.app/',
 
             status: 'In Progress',
@@ -30,11 +44,12 @@ function Projects() {
             description: 'create a system that allows students to manage their own information, including their contact information, they can manage their profile like view profile, edit profile, delete profile etc.  a students can Enrolled in a course, they can view their course details, view theie lectures and assignments, and lectures notes',
             url: 'https://emplyeemanagement1.vercel.app/',
             repository: 'https://github.com/gauravghuge7/emplyeemanagement1',
-            image: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+            image: '',
             technologies: 'React, Redux, Tailwind CSS, MongoDB, Express, Node.js',
 
             notice: 'If project is not working, there is hosted on personal account, only for personal use and not for commercial use. there you can check the repository of code there is attached the hosted link youn check from there if project not working, contact me on gauravghuge737@gmail.com '
         }
+
 
 
     ]
@@ -77,9 +92,9 @@ function Projects() {
                             <br/>
                             
                             <img 
-                                src=""
+                                src={project.image}
                                 alt="project landing page"
-                                className="w-[70%] h-40 m-auto"
+                                className="w-[70%] h-70 m-auto"
                             />
 
                             <br/>
