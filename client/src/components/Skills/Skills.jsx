@@ -4,6 +4,7 @@ import { useState } from "react";
 export default function Skills() {
 
     const [skills, setSkills] = useState([
+        
         {
             name: "Frontend",
             description: [
@@ -32,8 +33,8 @@ export default function Skills() {
                     image: "./skills/redux.png"
                 },
                 {
-                    name: "Node",
-                    image: "./skills/node.png"
+                    name: "Redux Toolkit",
+                    image: "./skills/redux-toolkit.png"
                 }
                 
                
@@ -88,10 +89,7 @@ export default function Skills() {
                     name: "Algorithms",
                     image: "./skills/algorithms.png"
                 },
-                {
-                    name: "Python",
-                    image: "./skills/python.png"
-                }
+                
                 
                
             ]
