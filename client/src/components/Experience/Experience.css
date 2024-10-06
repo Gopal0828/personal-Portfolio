@@ -1,0 +1,44 @@
+.container {
+   position: relative;
+   padding: 20px;
+ }
+ 
+ .travel-line {
+   position: absolute;
+   width: 2px;
+   background: #4A90E2; /* Line color */
+   transition: top 0.3s ease; /* Animation for the line */
+ }
+ 
+ .card {
+   transition: transform 0.3s;
+ }
+ 
+ .card:hover {
+   transform: scale(1.05); /* Scale up on hover */
+ }
+ 
+ .project-card {
+   border-radius: 8px;
+ }
+ 
+ @media (max-width: 640px) {
+   .card {
+     width: 100%; /* Full width on small screens */
+   }
+ 
+   .project-card {
+     width: 100%; /* Full width for project cards */
+   }
+ }
+ 
+ @media (min-width: 641px) {
+   .card {
+     width: 45%; /* Two cards per row on medium screens */
+   }
+ 
+   .project-card {
+     width: calc(100% - 1rem); /* Responsive for project cards */
+   }
+ }
+ 

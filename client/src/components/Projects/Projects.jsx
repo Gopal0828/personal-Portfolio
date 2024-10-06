@@ -67,73 +67,52 @@ function Projects() {
 
 
     return (
-        <div className=' mt-20 mb-10'>
-            <h1 className='text-xl font-bold m-12 text-center underline'>Projects</h1>
-
-            <section className="flex flex-col justify-around text-center gap-8">
-
-                {
-
-                    projects.map((project, index) => (
-
-
-                        <div 
-                            key={index} 
-                            className="shadow-lg shadow-gray-900  p-4 w-[80%] m-auto rounded-xl"
-                            >
-
-                            <h2 className='text-green-600 text-xl bg-gray-700 p-2 rounded-lg'>{project.name}</h2>
-
-                            <br/>
-                            <p> 
-                                <span className="text-rose-600 text-start bg-gray-700 p-2 rounded-lg mr-4">Status: </span>
-                                {project.status}
-                            </p>
-                            <br/>
-                            
-                            <img 
-                                src={project.image}
-                                alt="project landing page"
-                                className="w-[70%] h-70 m-auto"
-                            />
-
-                            <br/>
-                            <p className=''>{project.description}</p>
-
-
-                            <br/>   
-                            <div className="flex gap-2 justify-center items-center">
-                                            
-                                <button className="text-gray-900 rounded p-2 bg-pink-400 text-sm ">
-                                
-                                    
-                                    <a href={project.url} target="_blank" rel="noreferrer">
-                                        View Project
-                                    </a>    
-                                </button>
-
-                                <button className="text-gray-900 rounded p-2 bg-pink-400 text-sm ">
-                                
-                                    
-                                    <a href={project.repository} target="_blank" rel="noreferrer">
-                                        View Repository
-                                    </a>    
-                                </button>
-                            
-                            </div>
-
-                            
-                            
-
-                        </div>
-
-                    ))
-
-                }
-
-            </section>
-        
-        </div>
+        <div className='mt-20 mb-10'>
+        <h1 className='text-3xl font-bold m-12 text-center underline text-white'>Projects</h1>
+      
+        <section className="flex flex-col sm:flex-row sm:flex-wrap justify-around text-center gap-8">
+          {projects.map((project, index) => (
+            <div 
+              key={index} 
+              className="shadow-lg shadow-gray-900 p-4 w-[90%] sm:w-[45%] lg:w-[30%] m-auto rounded-xl bg-gray-800 transition-transform duration-300 transform hover:scale-105"
+            >
+              <h2 className='text-green-600 text-xl bg-gray-700 p-2 rounded-lg'>{project.name}</h2>
+      
+              <br />
+              <p> 
+                <span className="text-rose-600 text-start bg-gray-700 p-2 rounded-lg mr-4">Status: </span>
+                {project.status}
+              </p>
+              <br />
+              
+              <img 
+                src={project.image}
+                alt="project landing page"
+                className="w-[90%] h-auto m-auto rounded-lg shadow-md"
+              />
+      
+              <br />
+              <p className='text-gray-300'>{project.description}</p>
+      
+              <br />   
+              <div className="flex gap-2 justify-center items-center">
+                <button className="text-gray-900 rounded p-2 bg-pink-400 text-sm transition-transform duration-200 transform hover:scale-105">
+                  <a href={project.url} target="_blank" rel="noreferrer">
+                    View Project
+                  </a>    
+                </button>
+      
+                <button className="text-gray-900 rounded p-2 bg-pink-400 text-sm transition-transform duration-200 transform hover:scale-105">
+                  <a href={project.repository} target="_blank" rel="noreferrer">
+                    View Repository
+                  </a>    
+                </button>
+              </div>
+            </div>
+          ))}
+        </section>
+      </div>
+      
     )
 }
 
