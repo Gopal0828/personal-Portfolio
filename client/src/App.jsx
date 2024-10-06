@@ -1,6 +1,7 @@
 
 import './App.css'
-import Router from './Router/Router'
+
+import UserRoutes from './Router/User/Routes/UserRoutes'
 
 
 
@@ -12,8 +13,8 @@ function App() {
   return (
     <div>
 
+      <UserRoutes />
 
-      <Router />
     </div>
   )
 }
