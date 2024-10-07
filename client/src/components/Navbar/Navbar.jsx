@@ -77,9 +77,9 @@ function Navbar() {
                     </div>
 
                     {!smallMobileNav && (
-                        <div className="hidden lg:block text-xl font-bold text-gray-200">
+                        <Link to="/" className="hidden lg:block text-xl font-bold text-gray-200">
                             PORTFOLIO
-                        </div>
+                        </Link>
                     )}
                 </header>
 
@@ -103,7 +103,7 @@ function Navbar() {
                     {["Experience", "Skills", "Projects", "Education", "Contact"].map((item) => (
                         <li key={item} className="navbar-list">
                             <Link
-                                to={item === "Contact" ? "/contact" : "#"}
+                                to={`/${item}`}
                                 className="relative group hover:text-blue-400 transition duration-300 text-gray-200"
                             >
                                 {item}

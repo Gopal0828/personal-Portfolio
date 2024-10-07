@@ -7,6 +7,8 @@ import Education from '../../../components/Education/Education';
 import Projects from '../../../components/Projects/Projects';
 import Experience from '../../../components/Experience/Experience';
 import GithubDashboard from '../../../components/GithubDashboard/GithubDashboard';
+import Contact from '../../../components/Contact/Contact';
+import Skills from '../../../components/Skills/Skills';
 
 const UserRoutes = () => {
    return (
@@ -19,6 +21,8 @@ const UserRoutes = () => {
                   <Route path='/githubDashboard' element={<GithubDashboard />} />
                   <Route path='/education' element={<Education />} />
                   <Route path='/experience' element={<Experience />} />
+                  <Route path='/skills' element={<Skills />} />
+                  <Route path='/contact' element={<Contact />} />
 
                </Route>
 
