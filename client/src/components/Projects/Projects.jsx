@@ -70,7 +70,7 @@ function Projects() {
         <div className='mt-20 mb-10'>
         <h1 className='text-3xl font-bold m-12 text-center underline text-white'>Projects</h1>
       
-        <section className="flex flex-col sm:flex-row sm:flex-wrap justify-around text-center gap-8">
+        <section className="flex flex-col sm:flex-row sm:flex-wrap justify-around text-center gap-8" data-search-term="projects">
           {projects.map((project, index) => (
             <div 
               key={index} 

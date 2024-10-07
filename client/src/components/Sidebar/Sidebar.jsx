@@ -40,7 +40,7 @@ function Sidebar({ isSidebarOpen, setSidebarOpen }) {
 
                <li>
                <Link
-                  to="/"
+                  to="/githubDashboard"
                   className="text-white hover:text-gray-300 hover:bg-gray-700 p-2 block rounded-md transition-colors duration-200"
                >
                   DashBoard
@@ -49,7 +49,7 @@ function Sidebar({ isSidebarOpen, setSidebarOpen }) {
 
                <li  className="text-white hover:text-gray-300 hover:bg-gray-700 p-2 block rounded-md transition-colors duration-200">
                   <Link
-                     to="/"
+                     to="/education"
                   
                   >
                      Education
@@ -58,7 +58,7 @@ function Sidebar({ isSidebarOpen, setSidebarOpen }) {
                </li>
                <li  className="text-white hover:text-gray-300 hover:bg-gray-700 p-2 block rounded-md transition-colors duration-200">
                   <Link
-                     to="/"
+                     to="/experience"
                   
                   >
                      Experience
@@ -67,7 +67,7 @@ function Sidebar({ isSidebarOpen, setSidebarOpen }) {
                </li>
                <li>
                <Link
-                  to="/"
+                  to="/projects"
                   className="text-white hover:text-gray-300 hover:bg-gray-700 p-2 block rounded-md transition-colors duration-200"
                >
                   Projects 
