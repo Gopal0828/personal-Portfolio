@@ -82,14 +82,7 @@ function Sidebar({ isSidebarOpen, setSidebarOpen }) {
                </Link>
                </li>
                
-               <li>
-               <Link
-                  to="/about"
-                  className="text-white hover:text-gray-300 hover:bg-gray-700 p-2 block rounded-md transition-colors duration-200"
-               >
-                  About
-               </Link>
-               </li>
+         
                <li>
                <Link
                   to="/contact"

@@ -21,6 +21,8 @@ const UserRoutes = () => {
                   <Route path='/githubDashboard' element={<GithubDashboard />} />
                   <Route path='/education' element={<Education />} />
                   <Route path='/experience' element={<Experience />} />
+
+                  <Route path='/experience/:id' element={<Experience />} />
                   <Route path='/skills' element={<Skills />} />
                   <Route path='/contact' element={<Contact />} />
 

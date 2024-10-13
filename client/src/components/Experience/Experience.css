@@ -42,3 +42,39 @@
    }
  }
  
+
+
+
+
+
+
+ /* Fade In/Out Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Class for triggering fade in */
+.fade-in {
+  opacity: 1;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Optional fade out class, if needed */
+.fade-out {
+  opacity: 0;
+  animation: fadeOut 1s ease-in-out forwards;
+}
