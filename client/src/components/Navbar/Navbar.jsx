@@ -2,13 +2,14 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+
 import { useMediaQuery } from "@mui/material";
 import { useState } from "react";
 import { Sidebar } from "../Sidebar/Sidebar";
 
+
 function Navbar() {
-    const mobileNav = useMediaQuery('(max-width: 1024px)');
+
     const smallMobileNav = useMediaQuery('(max-width: 724px)');
     const [isSidebarOpen, setSidebarOpen] = useState(false);
     const [darkMode, setDarkMode] = useState(true);
@@ -19,12 +20,10 @@ function Navbar() {
     };
 
     const toggleDarkMode = () => {
-        setDarkMode(true);
+        setDarkMode(!darkMode);
     };
 
-    const toggleLightMode = () => {
-        setDarkMode(false);
-    };
+ 
 
     const handleSearch = (e) => {
         const term = e.target.value.toLowerCase();
@@ -61,19 +60,27 @@ function Navbar() {
     return (
         <main>
             <Sidebar isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
-            <nav className="fixed top-0 w-full bg-gray-800 shadow-lg z-50 p-4 flex flex-row lg:flex-row lg:justify-between items-center gap-2">
+            <nav className="fixed top-0 w-full bg-gray-800 shadow-lg z-50 p-4 flex flex-row lg:flex-row lg:justify-around items-center gap-2">
                 <div className="p-2" onClick={toggleSidebar}>
                     <button className="text-center text-lg font-semibold rotate-90 text-gray-200">|||</button>
                 </div>
 
                 <header className="flex justify-between items-center w-full lg:w-auto lg:space-x-6">
+
+                    
                     <div className="flex items-center space-x-2">
-                        <div onClick={toggleDarkMode} className="cursor-pointer p-1 hover:bg-gray-700 rounded-full">
+
+                        {
+                            darkMode ? <div onClick={toggleDarkMode} className="cursor-pointer p-1 hover:bg-gray-700 rounded-full">
                             <DarkModeIcon className="text-yellow-400" />
-                        </div>
-                        <div onClick={toggleLightMode} className="cursor-pointer p-1 hover:bg-gray-700 rounded-full">
+                        </div> 
+                        :  <div onClick={toggleDarkMode} className="cursor-pointer p-1 hover:bg-gray-700 rounded-full">
                             <LightModeIcon className="text-yellow-300" />
                         </div>
+
+                        }
+
+                        
                     </div>
 
                     {!smallMobileNav && (
@@ -100,7 +107,7 @@ function Navbar() {
                 </div>
 
                 <ul className="hidden lg:flex items-center gap-x-6 text-sm mt-4 lg:mt-0">
-                    {["Experience", "Skills", "Projects", "Education", "Contact"].map((item) => (
+                    {["Experience",  "Projects","Contact"].map((item) => (
                         <li key={item} className="navbar-list">
                             <Link
                                 to={`/${item}`}
@@ -113,10 +120,7 @@ function Navbar() {
                     ))}
                 </ul>
 
-                <div className="hidden lg:flex items-center gap-x-2 cursor-pointer hover:text-blue-400 transition duration-300 mt-4 lg:mt-0">
-                    <AccountCircleIcon className="text-gray-400" />
-                    <p className="text-sm text-gray-200">Profile</p>
-                </div>
+                
             </nav>
         </main>
     );
