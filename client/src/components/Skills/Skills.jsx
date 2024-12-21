@@ -171,44 +171,43 @@ export default function Skills() {
 
     return (
         <main className="py-10">
-  <h1 className='text-4xl font-bold text-center mb-8 text-gray-800'>Skills</h1>
-  <div className="flex flex-wrap justify-center gap-6">
-    {
-      skills.map((item, index) => (
-        <section
-          className="transition-transform duration-300 hover:scale-105 p-4 rounded-lg shadow-lg shadow-gray-400 text-white w-56 sm:w-64 ease-in-out"
-          key={index}
-        >
-          <h2 className='text-xl font-semibold text-center mb-2 underline'>
-            {item.name}
-          </h2>
-          <section className='flex flex-col gap-2'>
-            {
-              item.description && item.description.map((descItem, index) => (
-                <li
-                  key={index}
-                  className='flex items-center text-lg bg-white text-gray-800 shadow-md p-2 rounded-lg transition-colors duration-300 hover:bg-gray-200'
-                >
-                  <img
-                    src={descItem.image}
-                    alt={descItem.name}
-                    className='w-8 h-8 mr-2'
-                  />
-                  <p className='text-gray-700'>{descItem.name}</p>
-                </li>
-              ))
-            }
-          </section>
-        </section>
-      ))
-    }
-  </div>
-</main>
+            <h1 className='text-4xl font-bold text-center mb-8 text-gray-800'>Skills</h1>
+            <div className="flex flex-wrap justify-center gap-6">
+                {
+                skills.map((item, index) => (
+                    <section
+                    className="transition-transform duration-300 hover:scale-105 p-4 rounded-lg shadow-lg shadow-gray-400 text-white w-56 sm:w-64 ease-in-out"
+                    key={index}
+                    >
+                    <h2 className='text-xl font-semibold text-center mb-2 underline'>
+                        {item.name}
+                    </h2>
+                    <section className='flex flex-col gap-2'>
+                        {
+                        item.description && item.description.map((descItem, index) => (
+                            <li
+                            key={index}
+                            className='flex items-center text-lg bg-white text-gray-800 shadow-md p-2 rounded-lg transition-colors duration-300 hover:bg-gray-200'
+                            >
+                            <img
+                                src={descItem.image}
+                                alt={descItem.name}
+                                className='w-8 h-8 mr-2'
+                            />
+                            <p className='text-gray-700'>{descItem.name}</p>
+                            </li>
+                        ))
+                        }
+                    </section>
+                    </section>
+                ))
+                }
+            </div>
+        </main>
 
-      
-      
+        
     )
-  }
+}
 
 
 

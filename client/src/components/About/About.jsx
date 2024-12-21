@@ -14,7 +14,7 @@ function About() {
       </span>
       
       <button className="mt-4 rounded-xl w-48 md:w-72 lg:w-96 border-green-400 bg-black text-green-400 py-3 md:py-4 text-lg md:text-xl lg:text-2xl font-bold hover:bg-green-400 hover:text-black transition duration-300 transform hover:scale-105">
-        <a href="http://res.cloudinary.com/dsh5742fk/image/upload/v1723997745/hbwrkwlmb0zaak2bx5q4.pdf" download>
+        <a href="./Gaurav_Ghuge_Resume.pdf" download>
           Download Resume
         </a>
       </button>
