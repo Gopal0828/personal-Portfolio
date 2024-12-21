@@ -48,7 +48,39 @@ function Projects() {
             technologies: 'React, Redux, Tailwind CSS, MongoDB, Express, Node.js',
 
             notice: 'If project is not working, there is hosted on personal account, only for personal use and not for commercial use. there you can check the repository of code there is attached the hosted link youn check from there if project not working, contact me on gauravghuge737@gmail.com '
-        }
+        },
+        {
+          id: 5,
+          name: 'Laptop Checker App',
+          description: 'Designed an interface in Next.js for evaluating laptop performance, offering users actionable insights and optimized system interactions.',
+          repository: 'https://github.com/gauravghuge7/Second_hand_Laptop_checker',
+          url: 'https://second-hand-laptop-checker.vercel.app/',
+          image: '',
+          technologies: 'Next.js',
+          status: 'Completed',
+      },
+      {
+          id: 6,
+          name: 'Company Management System',
+          description: 'Built a Jira-like system for managing teams, clients, and tasks using React and Node.js.',
+          repository: 'https://github.com/gauravghuge7/company-management',
+          url: '',
+          image: '',
+          technologies: 'React, Node.js',
+          status: 'Completed',
+      },
+      {
+          id: 7,
+          name: 'Student Career Guide and Preparation',
+          description: 'Developed a MERN-based career guidance site with a responsive UI using React and secure APIs in Node.js. Integrated OpenAI for question paper preparation and scoring.',
+          repository: 'https://github.com/gauravghuge7/EMS_PRODUCTION',
+          url: 'https://naukari-project.onrender.com/',
+          image: '',
+          technologies: 'MERN stack',
+          status: 'Completed',
+      }
+
+
 
 
 

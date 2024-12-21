@@ -9,6 +9,7 @@ import Experience from '../../../components/Experience/Experience';
 import GithubDashboard from '../../../components/GithubDashboard/GithubDashboard';
 import Contact from '../../../components/Contact/Contact';
 import Skills from '../../../components/Skills/Skills';
+import Journey from '../../../components/Journey/Journey';
 
 const UserRoutes = () => {
    return (
@@ -25,6 +26,8 @@ const UserRoutes = () => {
                   <Route path='/experience/:id' element={<Experience />} />
                   <Route path='/skills' element={<Skills />} />
                   <Route path='/contact' element={<Contact />} />
+
+                  <Route path='journey' element={<Journey />} />
 
                </Route>
 

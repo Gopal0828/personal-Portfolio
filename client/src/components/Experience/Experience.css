@@ -1,80 +1,34 @@
 .container {
-   position: relative;
-   padding: 20px;
- }
- 
- .travel-line {
-   position: absolute;
-   width: 2px;
-   background: #4A90E2; /* Line color */
-   transition: top 0.3s ease; /* Animation for the line */
- }
- 
- .card {
-   transition: transform 0.3s;
- }
- 
- .card:hover {
-   transform: scale(1.05); /* Scale up on hover */
- }
- 
- .project-card {
-   border-radius: 8px;
- }
- 
- @media (max-width: 640px) {
-   .card {
-     width: 100%; /* Full width on small screens */
-   }
- 
-   .project-card {
-     width: 100%; /* Full width for project cards */
-   }
- }
- 
- @media (min-width: 641px) {
-   .card {
-     width: 45%; /* Two cards per row on medium screens */
-   }
- 
-   .project-card {
-     width: calc(100% - 1rem); /* Responsive for project cards */
-   }
- }
- 
-
-
-
-
-
-
- /* Fade In/Out Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+.experience-card {
+  background-color: #1a1a1a;
 }
 
-/* Class for triggering fade in */
-.fade-in {
-  opacity: 1;
-  animation: fadeIn 1s ease-in-out forwards;
+.experience-card:hover {
+  transform: translateY(-5px);
 }
 
-/* Optional fade out class, if needed */
-.fade-out {
-  opacity: 0;
-  animation: fadeOut 1s ease-in-out forwards;
+.custom-dialog {
+  position: relative;
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  border: none;
+  padding: 20px;
+}
+
+.project-card img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+button {
+  cursor: pointer;
+}
+
+hr {
+  border: 1px solid #444;
 }

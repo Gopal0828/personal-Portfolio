@@ -5,56 +5,56 @@ function Profiles() {
     const [profile, setProfile] = useState([
         {
             title: "GitHub",
-            icon: "./socialAssets/github.png",
+            icon: "./github.png",
             link: "https://github.com/gauravghuge7",
             description: "See Repository at my GitHub profile",
             username: "gauravghuge7"
         },
         {
             title: "LinkedIn",
-            icon: "./socialAssets/linked.png",
+            icon: "./linked.png",
             link: "https://www.linkedin.com/in/gaurav-ghuge-530651226/",
             description: "Join me on LinkedIn",
             username: "gauravghuge"
         },
         {
             title: "Instagram",
-            icon: "./socialAssets/insta.jpeg",
+            icon: "./insta.jpeg",
             link: "https://instagram.com/garry_7038?igshid=OGY3MTU3OGY1MW==",
             description: "Join with me on Instagram",
             username: "garry_7038"
         },
         {
             title: "Twitter",
-            icon: "./socialAssets/twitter.png",
+            icon: "./twitter.png",
             link: "https://twitter.com/gauravghuge737",
             description: "Join with me on Twitter",
             username: "gauravghuge737"
         },
         {
             title: "HashNode",
-            icon: "./socialAssets/hashnode.png",
+            icon: "./hashnode.png",
             link: "https://hashnode.com/@gauravghuge",
             description: "Read my articles on HashNode",
             username: "gauravghuge"
         },
         {
             title: "Medium",
-            icon: "./socialAssets/medium.png",
+            icon: "./medium.png",
             link: "https://medium.com/@gauravghuge737",
             description: "Read my articles on Medium",
             username: "gauravghuge737"
         },
         {
             title: "LeetCode",
-            icon: "./socialAssets/leetcode.jpeg",
+            icon: "./leetcode.jpeg",
             link: "https://leetcode.com/gauravghuge7/",
             description: "Check my progress on LeetCode",
             username: "gauravghuge7"
         },
         {
             title: "HackerRank",
-            icon: "./socialAssets/hacker.png",
+            icon: "./hacker.png",
             link: "https://www.hackerrank.com/profile/guduughuge7",
             description: "Check my progress on HackerRank",
             username: "guduughuge7"
@@ -67,14 +67,14 @@ function Profiles() {
             <div className="scroll-container">
                 <div className="scroll-content gap-40">
                     {profile.map((item, index) => (
-                      <a
-                      key={index}
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="snap-start shadow-md p-3 border-red-400 border-2 shadow-gray-400 rounded-lg hover:shadow-xl transition duration-300 ease-in-out hover:scale-105 hover:bg-gray-100 hover:text-black mx-2" // Adjusted padding, shadow, and margins
-                      style={{ minWidth: '180px', maxWidth: '220px' }} // Smaller width
-                  >
+                        <a
+                        key={index}
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="snap-start shadow-md p-3 border-red-400 border-2 shadow-gray-400 rounded-lg hover:shadow-xl transition duration-300 ease-in-out hover:scale-105 hover:bg-gray-100 hover:text-black mx-2" // Adjusted padding, shadow, and margins
+                        style={{ minWidth: '180px', maxWidth: '220px' }} // Smaller width
+                        >
                       <span className="flex flex-col items-center"> {/* Center content vertically */}
                           <img src={item.icon} alt={item.title} className="mb-2" style={{ height: '50px', width: '50px' }} /> {/* Adjusted image size */}
                           <h2 className="text-lg font-semibold text-center">{item.title}</h2> {/* Reduced font size */}

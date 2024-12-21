@@ -107,7 +107,7 @@ function Navbar() {
                 </div>
 
                 <ul className="hidden lg:flex items-center gap-x-6 text-sm mt-4 lg:mt-0">
-                    {["Experience",  "Projects","Contact"].map((item) => (
+                    {[ "Journey","Contact"].map((item) => (
                         <li key={item} className="navbar-list">
                             <Link
                                 to={`/${item}`}
