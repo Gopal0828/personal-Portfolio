@@ -1,46 +1,15 @@
 import { useState, useRef } from "react";
 import "./Experience.css";
+import { experience as experienceData } from "../../services/information.js";
 
 function Experience() {
-  const [experience, setExperience] = useState([
-    {
-      id: 1,
-      company: "Arohi Software",
-      address: "Shrigonda, Ahmednagar, Maharashtra, India",
-      position: "Full Stack Developer",
-      startDate: "07 May 2025",
-      endDate: "18 August 2025",
-      description:
-        "I started my first job as a full stack developer in May 2024. I am very interested in learning new things and I am ready to work on industry live projects.",
-      project: [
-        {
-          id: 1,
-          name: "Employee Management System",
-          description:
-            "Create a system that allows employees to manage their own information.",
-          url: "https://emplyeemanagement1.vercel.app/",
-          repository: "https://github.com/gauravghuge7/emplyeemanagement1",
-          image: "./arohi-employee.png",
-          technologies: "React, Node.js, MongoDB",
-        },
-        {
-          id: 2,
-          name: "Learning Management System",
-          description:
-            "Create a system that allows students to manage their information and enroll in courses.",
-          url: "https://cloud.google.com/",
-          repository: "https://github.com/gauravghuge7/LMS",
-          image: "",
-          technologies: "React, Redux, Tailwind CSS, MongoDB, Express, Node.js",
-        },
-      ],
-    },
-  ]);
+  const [experience, setExperience] = useState(experienceData);
 
   const projectRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const openProjects = () => {
+  const openProjects = (idx) => {
+    setCurrentIndex(idx);
     projectRef.current.showModal();
   };
 
@@ -81,7 +50,7 @@ function Experience() {
             <p className="text-sm text-gray-300 mb-4">{exp.description}</p>
             <button
               className="bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition duration-300"
-              onClick={openProjects}
+              onClick={() => openProjects(index)}
             >
               View Projects
             </button>

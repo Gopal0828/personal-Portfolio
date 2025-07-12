@@ -1,38 +1,86 @@
+import { useState, useEffect } from 'react';
+import AboutImage from "../../../public/personal_photos/photo_gaurav_ghgue.jpg";
+import GauravGhibali from "../../../public/personal_photos/gibili_photo.png";
 
 function About() {
+  const [currentImage, setCurrentImage] = useState(AboutImage);
+  const [currentText, setCurrentText] = useState(" Fullstack (MERN) Software Development");
+  const [displayText, setDisplayText] = useState("");
+  const [charIndex, setCharIndex] = useState(0);
+
+  useEffect(() => {
+    const imageInterval = setInterval(() => {
+      setCurrentImage(prev => prev === AboutImage ? GauravGhibali : AboutImage);
+    }, 6000);
+
+    const textInterval = setInterval(() => {
+      setCurrentText(prev => 
+        prev === " Software Developer" 
+          ? "Java Developer" 
+          : " Fullstack Software Development"
+      );
+      setCharIndex(0); // Reset character index when text changes
+    }, 6000);
+
+    return () => {
+      clearInterval(imageInterval);
+      clearInterval(textInterval);
+    }; // Cleanup on unmount
+  }, []);
+
+  // Typing animation effect
+  useEffect(() => {
+    if (charIndex < currentText.length) {
+      const typingInterval = setInterval(() => {
+        setDisplayText(currentText.substring(0, charIndex + 1));
+        setCharIndex(prev => prev + 1);
+      }, 100); // Adjust typing speed here (lower number = faster)
+
+      return () => clearInterval(typingInterval);
+    }
+  }, [charIndex, currentText]);
+
   return (
-    <div className="flex flex-col justify-center items-center m-10 md:m-20 lg:m-28">
-  <section className="flex flex-wrap m-4 p-6 gap-12 justify-center items-center">
-    
-    <div className="flex flex-col items-center md:items-start text-center md:text-left">
-      {/** about information section with fade-in animation */}
-      <p className="text-lg md:text-xl mb-2 animate-fadeIn delay-100">Hello, It&nbsp;s Me</p>
-      <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-400 animate-fadeIn delay-200">GAURAV GHUGE</p>
-      <p className="text-lg md:text-xl mt-2 animate-fadeIn delay-300">I am a student who is passionate in</p>
-      <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-400 mt-2 animate-fadeIn delay-400">
-        Software Development<br />& System Design
-      </span>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(147,51,234,0.1),transparent_50%)]"></div>
       
-      <button className="mt-4 rounded-xl w-48 md:w-72 lg:w-96 border-green-400 bg-black text-green-400 py-3 md:py-4 text-lg md:text-xl lg:text-2xl font-bold hover:bg-green-400 hover:text-black transition duration-300 transform hover:scale-105">
-        <a href="./Gaurav_Ghuge_Resume.pdf" download>
-          Download Resume
-        </a>
-      </button>
+      <section className="max-w-7xl mx-auto flex flex-wrap gap-16 justify-center items-center relative z-10">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+          <p className="text-lg md:text-xl text-gray-300 animate-fadeIn delay-100">
+            Hello, It&apos;s Me
+          </p>
+          <p className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 text-transparent bg-clip-text animate-fadeIn delay-200">
+            Gaurav Ghuge
+          </p>
+          <p className="text-lg md:text-xl text-gray-300 mt-2 animate-fadeIn delay-300">
+            I am a professional software developer
+          </p>
+          <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 animate-fadeIn delay-400 transition-all duration-300">
+            {displayText}
+            <span className="animate-pulse">|</span>
+          </span>
+          
+          {/* <button className="mt-8 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-white text-lg md:text-xl font-bold hover:from-purple-600 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30">
+            <a href="./Gaurav_Ghuge_Resume.pdf" download className="flex items-center gap-2">
+              Download Resume
+            </a>
+          </button> */}
+        </div>
+
+        <div className="flex justify-center items-center">
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-blue-600 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+            <img 
+              src={currentImage} 
+              alt="profile photo" 
+              className="relative rounded-full w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 object-cover border-4 border-gray-800/50 transition duration-500 transform group-hover:scale-105 group-hover:border-blue-400/50" 
+            />
+          </div>
+        </div>  
+      </section>
     </div>
-
-    <div className="flex justify-center items-center mt-6 md:mt-0">
-      <div className="relative group">
-        <img 
-          src="http://res.cloudinary.com/dsh5742fk/image/upload/v1723997949/ireznsofoi9jvpioxf2t.jpg" 
-          alt="photo" 
-          className="rounded-full border-4 border-gray-900 w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 transition duration-500 transform group-hover:scale-110"
-        />
-        <div className="absolute inset-0 rounded-full border-4 border-transparent group-hover:border-blue-400 transition-all duration-500"></div>
-      </div>
-    </div>  
-  </section>
-</div>
-
   )
 }
 
