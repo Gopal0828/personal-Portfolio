@@ -1,68 +1,53 @@
 import { useState } from "react";
+import {
+  FaAws,
+  FaDocker,
+  FaJenkins,
+  FaPython,
+  FaGitAlt,
+  FaLinux,
+} from "react-icons/fa";
+import { SiTerraform, SiAnsible, SiSonarqube, SiSplunk } from "react-icons/si";
 
 export default function Skills() {
   const [skills] = useState([
     {
-      name: "Frontend",
+      name: "Cloud & Containerization",
       description: [
-        { name: "HTML", image: "./html.png" },
-        { name: "CSS", image: "./css.png" },
-        { name: "JavaScript", image: "./javascript.png" },
-        { name: "React", image: "./react.png" },
-        { name: "Tailwind Css", image: "./tailwind.png" },
-        { name: "Redux", image: "./redux.png" },
-        { name: "Redux Toolkit", image: "./redux-toolkit.png" }
-      ]
+        { name: "AWS", icon: <FaAws size={30} color="#FF9900" /> },
+        { name: "Docker", icon: <FaDocker size={30} color="#2496ED" /> },
+      ],
     },
     {
-      name: "Backend",
+      name: "Automation & Infrastructure",
       description: [
-        { name: "NodeJs", image: "./nodejs.png" },
-        { name: "Express", image: "./express.png" },
-        { name: "JavaScript", image: "./javascript.png" },
-        { name: "Authentication", image: "./authentication.png" },
-        { name: "JWT", image: "./jwt.png" },
-        { name: "Authorization", image: "./authorization.png" }
-      ]
+        { name: "Terraform", icon: <SiTerraform size={30} color="#623CE4" /> },
+        { name: "Ansible", icon: <SiAnsible size={30} color="#EE0000" /> },
+        { name: "Jenkins", icon: <FaJenkins size={30} color="#D24939" /> },
+        { name: "Python", icon: <FaPython size={30} color="#3776AB" /> },
+      ],
     },
     {
-      name: "Core Languages",
+      name: "Monitoring & Logging",
       description: [
-        { name: "C++", image: "./c++.png" },
-        { name: "JAVA", image: "./java.png" },
-        { name: "Data Structures", image: "./data-structures.png" },
-        { name: "Algorithms", image: "./algorithms.png" }
-      ]
+      
+        { name: "Splunk", icon: <SiSplunk size={30} color="#1F2326" /> },
+        { name: "SonarQube", icon: <SiSonarqube size={30} color="#4E9BCD" /> },
+      ],
     },
     {
-      name: "Databases",
+      name: "Version Control & OS",
       description: [
-        { name: "MongoDB", image: "./mongodb.png" },
-        { name: "MySQL", image: "./mysql.png" },
-        { name: "SQL", image: "./sql.png" },
-        { name: "DBMS", image: "./dbms.png" },
-        { name: "RDBMS", image: "./rdbms.png" }
-      ]
+        { name: "Git", icon: <FaGitAlt size={30} color="#F05032" /> },
+        { name: "Linux", icon: <FaLinux size={30} color="#FCC624" /> },
+      ],
     },
-    {
-      name: "Tools",
-      description: [
-        { name: "VS Code", image: "./vscode.png" },
-        { name: "Git", image: "./git.png" },
-        { name: "npm", image: "./npm.png" },
-        { name: "Postman", image: "./postman.png" },
-        { name: "Terminal", image: "./terminal.png" },
-        { name: "Linux", image: "./linux.png" },
-        { name: "GitHub", image: "./github.png" },
-        { name: "AWS", image: "./aws.png" }
-      ]
-    }
   ]);
 
   return (
     <main className="py-16 px-6 bg-gradient-to-br from-gray-900 to-black min-h-screen">
       <h1 className="text-5xl font-extrabold text-center text-white mb-14 tracking-tight">
-        My Tech Stack
+        Gopal Dafal's DevOps Tech Stack
       </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 justify-items-center">
@@ -81,11 +66,7 @@ export default function Skills() {
                   key={idx}
                   className="flex items-center gap-4 bg-gray-700 hover:bg-gray-600 transition-colors duration-200 p-4 rounded-xl"
                 >
-                  <img
-                    src={descItem.image}
-                    alt={descItem.name}
-                    className="w-10 h-10 object-contain"
-                  />
+                  <span>{descItem.icon}</span>
                   <span className="text-white font-medium text-lg">{descItem.name}</span>
                 </li>
               ))}

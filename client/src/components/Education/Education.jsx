@@ -7,29 +7,19 @@ const Education = () => {
    const [education, setEducation] = React.useState([
 
       {
-         schoolName: 'Maharashtra state Board of Secondary and Higher Secondary Education',
-         degree: 'Secondary Education',
-         year: 2019,
-         major: 'Science',
-         percentage: 79.00,
-         
-      },
-      {
-         schoolName: 'Maharashtra state Board of Secondary and Higher Secondary Education',
-         degree: 'Higher Secondary Education ', 
-         year: "2021",
-         major: 'Science',
-         percentage: 83.17,
-      
-      },
-      {
-         schoolName: 'Dr Babasaheb Ambedkar Marathwada University',
-         degree: 'Bachelor of Science in Computer Science', 
-         year: "Expected 2025",
-         major: 'Computer Science',
-         percentage: "grade A++",
-      
-      }
+        schoolName: 'Dr Babasaheb Ambedkar Marathwada University',
+        degree: 'Bachelor of Science in Computer Science',
+        year: "2022",
+        major: 'Computer Science',
+        percentage: "73.00",
+    },
+    {
+        schoolName: 'Vivekanand College of Aurangabad',
+        degree: 'Master of Computer Science (MSC)',
+        year: "Completed 2024",
+        major: 'Computer Science',
+        percentage: "69.00",
+    }
    ])
 
 

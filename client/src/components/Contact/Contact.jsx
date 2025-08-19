@@ -8,32 +8,30 @@ export default class Contact extends Component {
           <h1 className="text-4xl font-bold mb-2">
             Contact <span className="text-blue-500">Us</span>
           </h1>
-          <p className="text-lg text-gray-400">Let’s connect with Gaurav Ghuge</p>
+          <p className="text-lg text-gray-400">Let’s connect with Gopal Kautik Dafal</p>
         </section>
 
         <main className="flex flex-col lg:flex-row items-stretch gap-10 justify-center max-w-7xl mx-auto">
           {/* Contact Details Card */}
           <div className="bg-gray-900 rounded-2xl p-8 shadow-xl flex-1 flex flex-col justify-center">
             <h2 className="text-3xl font-semibold mb-4 text-center">Contact Details</h2>
-            <p className="text-gray-400 mb-6 text-center">Connect with Gaurav to know more!</p>
+            <p className="text-gray-400 mb-6 text-center">Connect with Gopal to know more!</p>
 
             <div className="space-y-6">
               <div className="text-center">
                 <h3 className="text-xl font-semibold text-blue-400 mb-1">PHONE</h3>
-                <p className="text-gray-300">+91 8767482793, +91 9421328262</p>
+                <p className="text-gray-300">+91 9146363863</p>
               </div>
 
               <div className="text-center">
                 <h3 className="text-xl font-semibold text-blue-400 mb-1">EMAIL</h3>
-                <p className="text-gray-300">gauravghuge737@gmail.com</p>
+                <p className="text-gray-300">gopspatil28@gmail.com</p>
               </div>
 
               <div className="text-center">
                 <h3 className="text-xl font-semibold text-blue-400 mb-1">ADDRESS</h3>
                 <p className="text-gray-300">
-                  226, At Deopul Village, Post Wasadi <br />
-                  Sub-District Kannad, Aurangabad (Sambajinagar) <br />
-                  Maharashtra, India 431104
+                  Pune, Maharashtra, India
                 </p>
               </div>
             </div>
